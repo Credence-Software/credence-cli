@@ -15,7 +15,12 @@ from credence.errors import CredenceCliError
 from credence.filters import parse_public_ids
 from credence.output import write_json
 
-app = typer.Typer(no_args_is_help=True)
+CREDENCE_WEB = "https://credence-software.com"
+
+app = typer.Typer(
+    no_args_is_help=True,
+    epilog=f"Learn more about Credence at {CREDENCE_WEB}",
+)
 
 
 @dataclass
